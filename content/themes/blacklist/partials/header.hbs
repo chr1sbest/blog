@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="row">
+
+    <div class="column medium-column-35 large-column-25">
+      {{#if @blog.logo}}
+        <h1 class="site-title"><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a></h1>
+      {{else}}
+        <h1 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      {{/if}}
+      <p class="site-description">{{@blog.description}}</p>
+    </div>
+
+    <div class="column">
+      <form class="search-form">
+        <span class="icon-search"></span>
+        <input type="search" id="search-field" placeholder="Search...">
+      </form>
+    </div>
+
+  </div>
+</header>

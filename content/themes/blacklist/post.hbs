@@ -1,0 +1,73 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<main class="site-main wow fadeIn" data-wow-duration=".8s" role="main">
+
+  {{! Search results }}
+  <section id="results"></section>
+
+  {{! Everything inside the #post tags pulls data from the post }}
+  {{#post}}
+
+    {{#if feature_image}}
+      <section class="featured-image">
+        <img src="{{img_url feature_image}}" alt="{{title}}">
+      </section>
+    {{/if}}
+
+    <div class="row">
+      <div class="column medium-column-65">
+
+        <article class="{{post_class}}">
+          <header class="entry-header">
+            {{#author}}
+              <p class="entry-author">By <a href="{{url}}">{{name}}</a></p>
+            {{/author}}
+            <h1>{{title}}</h1>
+            <time class="entry-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          </header>
+
+          <section class="entry-content">
+            <p class="entry-tags">{{tags prefix="On: "}}</p>
+            {{content}}
+          </section>
+        </article>
+
+        <section class="read-next-story">
+          <div class="row">
+
+            <div class="column">
+              {{#next_post}}
+                <div class="next">
+                  <p>Next story</p>
+                  <h3><a href="{{url}}">{{title}}</a></h3>
+                </div>
+              {{/next_post}}
+            </div>
+
+            <div class="column">
+              {{#prev_post}}
+                <div class="prev">
+                  <p>Previous story</p>
+                  <h3><a href="{{url}}">{{title}}</a></h3>
+                </div>
+              {{/prev_post}}
+            </div>
+
+          </div>
+        </section>
+
+        {{! The tag below includes comments - partials/comments.hbs }}
+        {{> comments}}
+      </div>
+
+      <div class="column medium-offset-5">
+
+        {{> sidebar}}
+
+      </div>
+    </div>{{! End .row }}
+
+  {{/post}}
+
+</main>

@@ -1,0 +1,10 @@
+{{#get "posts" limit="3" as |recents|}}
+  <section class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <ul>
+      {{#foreach recents}}
+        <li><a href="{{url}}">{{title}}</a></li>
+      {{/foreach}}
+    </ul>
+  </section>
+{{/get}}
