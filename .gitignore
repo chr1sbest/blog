@@ -77,3 +77,4 @@ coverage.html
 
 # Buster generated content
 /static/**/*
+/content/themes/blacklist/assets/output.xml
