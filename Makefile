@@ -22,4 +22,4 @@ serve:
 
 # Upload new static content to S3
 upload:
-	aws s3 cp static/ s3://chrisbest.com/ --recursive
+	aws s3 sync static/ s3://chrisbest.com/
