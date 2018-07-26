@@ -26,3 +26,4 @@ serve:
 # Upload new static content to S3
 upload:
 	aws s3 sync static/ s3://chrisbest.com/
+	aws s3 cp posts.json s3://chrisbest-private/
