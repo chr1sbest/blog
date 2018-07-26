@@ -27,3 +27,6 @@ serve:
 upload:
 	aws s3 sync static/ s3://chrisbest.com/
 	aws s3 cp posts.json s3://chrisbest-private/
+
+# Generate static files and upload them to S3 in single step
+push: generate upload
