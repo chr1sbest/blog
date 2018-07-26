@@ -15,6 +15,9 @@ generate:
 	# Generate mock JSON output while running Ghost locally.
 	wget 'localhost:2368/rss' -O content/themes/blacklist/assets/output.xml
 	cp content/themes/blacklist/assets/output.xml static/assets/output.xml
+	# Export POSTS into JSON to track in git
+	# access_token is for local dev
+	wget 'localhost:2368/ghost/api/v0.1/db/?access_token=${GHOST_TOKEN}' -O posts.json
 
 # Serve static content locally to test
 serve:
