@@ -6,10 +6,12 @@ https://github.com/axitkhurana/buster
 
 ## Development
 
-- Run local ghost CMS with `grunt dev`
+- Run local ghost CMS with `make dev`
 
-- Edit content
+- Edit content from localhost:2368/admin
 
-- Run `buster generate --domain=$ghostport`
+- Run `make generate` to generate static assets
 
-- Upload static files to Amazon S3
+- Test locally with `make serve`
+
+- Upload static files to Amazon S3 with `make push`
