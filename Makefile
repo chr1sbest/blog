@@ -28,5 +28,9 @@ upload:
 	aws s3 sync static/ s3://chrisbest.com/
 	aws s3 cp posts.json s3://chrisbest-private/
 
-# Generate static files and upload them to S3 in single step
-push: generate upload
+# Bust S3 Cache
+bust-cache:
+	aws cloudfront create-invalidation --distribution-id ESUFV9I55SS5I --paths '/*'
+
+# Generate static files, upload them to S3, and bust cloudfront cache
+push: generate upload bust-cache
