@@ -3,7 +3,6 @@ setup:
 	yarn global add knex-migrator grunt-cli ember-cli bower
 	yarn setup
 	pip install buster
-	./scripts/patch_ghost_hunter.sh
 
 # Run the local Ghost CMS to edit posts and style
 dev:
