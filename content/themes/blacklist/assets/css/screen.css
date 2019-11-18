@@ -2052,11 +2052,11 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a, h5:hover a, h6:hover a {
 }
 
 .site-header {
-  margin: 10rem 0 0rem;
+  margin: 5rem 0 0rem;
 }
 @media screen and (min-width: 480px) {
   .site-header {
-    margin: 6rem 0 0rem;
+    margin: 3rem 0 0rem;
   }
 }
 
