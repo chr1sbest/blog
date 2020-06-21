@@ -1262,68 +1262,68 @@ mark,
     opacity: 1;
   }
 }
-@media screen and (min-width: 480px) {
-  .navigation-toggle-container {
-    display: none;
-  }
 
-  .site-navigation-overlay {
-    position: relative;
-    z-index: 0;
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: none;
-    transition: none;
-  }
-  .site-navigation-overlay:before, .site-navigation-overlay:after {
-    display: none;
-  }
-
-  .site-navigation {
-    top: 0;
-    z-index: 0;
-  }
-  .site-navigation ul {
-    *zoom: 1;
-    top: 0;
-    z-index: 0;
-    font-size: 1.4rem;
-    font-weight: 400;
-    text-align: left;
-  }
-  .site-navigation ul:after, .site-navigation ul:before {
-    content: "";
-    display: table;
-  }
-  .site-navigation ul:after {
-    clear: both;
-  }
-  .site-navigation li {
-    float: left;
-    margin-bottom: 1rem;
-    opacity: 1;
-  }
-  .site-navigation li:not(:last-child) {
-    margin-right: 6rem;
-  }
-  .site-navigation a {
-    display: inline-block;
-    color: black;
-    font-size: 1.5rem;
-  }
-
-  .nav-current a {
-    position: relative;
-  }
-  .nav-current a:before {
-    content: "";
-    position: absolute;
-    bottom: -0.6rem;
-    width: 1rem;
-    height: 0.1rem;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+.navigation-toggle-container {
+display: none;
 }
+
+.site-navigation-overlay {
+position: relative;
+z-index: 0;
+opacity: 1;
+visibility: visible;
+-webkit-transition: none;
+transition: none;
+}
+.site-navigation-overlay:before, .site-navigation-overlay:after {
+display: none;
+}
+
+.site-navigation {
+top: 0;
+z-index: 0;
+}
+.site-navigation ul {
+*zoom: 1;
+top: 0;
+z-index: 0;
+font-size: 1.4rem;
+font-weight: 400;
+text-align: left;
+}
+.site-navigation ul:after, .site-navigation ul:before {
+content: "";
+display: table;
+}
+.site-navigation ul:after {
+clear: both;
+}
+.site-navigation li {
+float: left;
+margin-bottom: 1rem;
+opacity: 1;
+}
+.site-navigation li:not(:last-child) {
+margin-right: 6rem;
+}
+.site-navigation a {
+display: inline-block;
+color: black;
+font-size: 1.5rem;
+}
+
+.nav-current a {
+position: relative;
+}
+.nav-current a:before {
+content: "";
+position: absolute;
+bottom: -0.6rem;
+width: 1rem;
+height: 0.1rem;
+background-color: rgba(0, 0, 0, 0.2);
+}
+
 .pagination {
   margin-bottom: 8rem;
 }
