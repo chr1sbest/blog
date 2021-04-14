@@ -1,0 +1,48 @@
+/* Style the button that is used to open and close the collapsible content */
+.collapsible-menu {
+  color: rgba(0,0,0,0.8);
+  font-family: "Georgia",serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: .01rem;
+  line-height: 1.6;
+  background-color: #eee;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  text-transform: none;
+  padding: 5px;
+  width: 100%;
+}
+
+.collapsible-list {
+  margin: 0;
+  font-family: "Georgia",serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: .01rem;
+  line-height: 1.6;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible-menu:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.collapsible-content {
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.button {
+    font-family: "Georgia",serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .01rem;
+    line-height: 1.6;
+}
