@@ -19,11 +19,12 @@ generate:
 	wget 'localhost:2368/ghost/api/v0.1/db/?access_token=${GHOST_TOKEN}' -O posts.json
 
 replace-local:
-	grep -rl localhost:2368 static/ | xargs sed -i -- 's/localhost\:2368/chrisbest\.com/g'
+	grep -rl localhost:2368 static/ | xargs sed -i '' 's/localhost\:2368/chrisbest\.com/g'
+	grep -rl localhost:2368 static/ | xargs sed -i '' 's/localhost\:8000/chrisbest\.com/g'
 
 # Serve static content locally to test
 serve:
-	grep -rl localhost:2368 static/ | xargs sed -i -- 's/localhost\:2368/localhost\:8000/g'
+	grep -rl localhost:2368 static/ | xargs sed -i '' 's/localhost\:2368/localhost\:8000/g'
 	cd static; python -m SimpleHTTPServer
 
 # Upload new static content to S3
