@@ -18,8 +18,12 @@ generate:
 	# access_token is for local dev
 	wget 'localhost:2368/ghost/api/v0.1/db/?access_token=${GHOST_TOKEN}' -O posts.json
 
+replace-local:
+	grep -rl localhost:2368 static/ | xargs sed -i -- 's/localhost\:2368/chrisbest\.com/g'
+
 # Serve static content locally to test
 serve:
+	grep -rl localhost:2368 static/ | xargs sed -i -- 's/localhost\:2368/localhost\:8000/g'
 	cd static; python -m SimpleHTTPServer
 
 # Upload new static content to S3
@@ -32,4 +36,4 @@ bust-cache:
 	aws cloudfront create-invalidation --distribution-id ESUFV9I55SS5I --paths '/*'
 
 # Generate static files, upload them to S3, and bust cloudfront cache
-push: generate upload bust-cache
+push: generate replace-local upload bust-cache
