@@ -46,3 +46,7 @@
     letter-spacing: .01rem;
     line-height: 1.6;
 }
+
+.collapsible-menu:visited {
+  background-color: #f1f1f1;
+}
