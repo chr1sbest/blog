@@ -17,6 +17,10 @@
   width: 100%;
 }
 
+.collapsible-menu:focus {
+  background-color: #eee;
+}
+
 .collapsible-list {
   margin: 0;
   font-family: "Georgia",serif;
@@ -45,8 +49,4 @@
     font-weight: 400;
     letter-spacing: .01rem;
     line-height: 1.6;
-}
-
-.collapsible-menu:visited {
-  background-color: #f1f1f1;
 }
